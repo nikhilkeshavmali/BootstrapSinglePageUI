@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GreenLedger</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+
+    <style>
+      .navbar-nav {
+        margin-right: 100px;
+      }
+
+      .hero-section {
+        background: url("./service.jpg") no-repeat center center/cover;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        position: relative;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 100, 0, 0.3);
+        z-index: 1;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+      }
+
+      .btn-custom {
+        background-color: #198754;
+        border: none;
+        padding: 10px 25px;
+        font-size: 18px;
+        color: white;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn-custom:hover {
+        background-color: #145c32;
+      }
+
+      .service-card {
+        background: white;
+        border-radius: 8px;
+        padding: 30px 20px;
+        text-align: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .service-icon {
+        font-size: 40px;
+        color: #198754;
+        margin-bottom: 15px;
+      }
+
+      .service-title {
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      .service-text {
+        color: #555;
+        font-size: 15px;
+      }
+
+      .about-section {
+        background-color: #f8f9fa;
+        padding: 60px 0;
+      }
+
+      .about-img {
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        max-width: 100%;
+        height: auto;
+        transition: transform 0.4s ease;
+      }
+
+      /* Hover zoom effect */
+      .about-img:hover {
+        transform: scale(1.05);
+      }
+
+      .about-title {
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+
+      .about-text {
+        color: #555;
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      .contact-section {
+        padding: 60px 0;
+        background-color: #fff;
+      }
+
+      .contact-title {
+        font-weight: 700;
+        margin-bottom: 30px;
+      }
+
+      /* Footer */
+      footer {
+        background-color: #145c32;
+        color: white;
+        padding: 30px 0;
+      }
+
+      footer a {
+        color: #b2d8b2;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-success">
+      <a class="navbar-brand text-white" href="#">GreenLedger</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto pr-3">
+          <li class="nav-item active">
+            <a class="nav-link text-white" href="#">Service</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Contact</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
+            Search
+          </button>
+        </form>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="overlay"></div>
+      <div class="hero-content container">
+        <h1 class="display-4 fw-bold">Your Trusted Accounting Partner</h1>
+        <p class="lead">
+          Expert financial solutions for businesses of all sizes
+        </p>
+        <a href="#" class="btn btn-custom">Get Started</a>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="text-center fw-bold mb-5">Our Services</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="service-card">
+              <i class="bi bi-calculator service-icon"></i>
+              <h5 class="service-title">Tax Preparation</h5>
+              <p class="service-text">
+                Comprehensive tax planning and filing to save you time and
+                money.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="service-card">
+              <i class="bi bi-graph-up-arrow service-icon"></i>
+              <h5 class="service-title">Financial Consulting</h5>
+              <p class="service-text">
+                Strategic advice to help your business grow sustainably.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="service-card">
+              <i class="bi bi-wallet2 service-icon"></i>
+              <h5 class="service-title">Bookkeeping</h5>
+              <p class="service-text">
+                Accurate and timely records to keep your finances in order.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <h2 class="about-title">About GreenLedger</h2>
+            <p class="about-text">
+              At GreenLedger, we specialize in delivering precise, reliable, and
+              efficient accounting solutions. With years of industry experience,
+              our team ensures that your financial management is seamless,
+              giving you more time to focus on what matters most—your business.
+            </p>
+          </div>
+
+          <div class="col-lg-6 text-center">
+            <img
+              src="./service3.jpg"
+              alt="About GreenLedger"
+              class="about-img"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <div class="container">
+        <h2 class="text-center contact-title">Contact Us</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-6 col-md-8">
+            <form>
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Your Name"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Your Email"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="4"
+                  placeholder="Your Message"
+                ></textarea>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn-custom w-100">
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container text-center">
+        <p class="mb-2">© 2025 GreenLedger. All rights reserved.</p>
+        <div>
+          <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
